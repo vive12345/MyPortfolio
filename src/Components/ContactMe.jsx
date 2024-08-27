@@ -81,7 +81,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="bg-gray-900 text-white min-h-screen">
+    <div className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="flex flex-col lg:flex-row justify-between">
           <div className="lg:w-1/2 mb-8 lg:mb-0">
@@ -120,7 +120,7 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
-      <footer className="bg-gray-800 py-4 mt-16">
+      <footer className="bg-gray-800 py-4 mt-16 align-bottom">
         <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
           <div className="flex space-x-4 mb-4 sm:mb-0">
             <a href="https://www.linkedin.com/in/vipsakamani/" target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-green-400"><i className="fab fa-linkedin-in"></i></a>

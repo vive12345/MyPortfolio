@@ -63,10 +63,10 @@ const PortfolioPage = () => {
         <div className="flex flex-col lg:flex-row items-center">
           <div className="lg:w-1/2 p-6 lg:p-10 z-10">
             <h2 className="text-green-800 text-xl lg:text-2xl font-semibold mb-3">
-              The Process of Building a Portfolio for
+            Developing Responsive Wonders 
             </h2>
             <h1 id="about-me" className="text-3xl lg:text-4xl font-bold mb-6 text-gray-800">
-              Full Stack Web Development Job
+            Where Flexibility Meets Functionality
             </h1>
             <button 
               onClick={handleLinkedInClick}

@@ -105,7 +105,7 @@ const Projects = () => {
       title: "Stock Prediction Using Machine Learning",
       subtitle: "Predicting stock trends with advanced ML algorithms",
       description: "Developed a machine learning model to predict stock trends using various classification algorithms.",
-      image: "./assets/HealthProject.jpg", // You'll need to add this image
+      image: "assets/HealthProject.jpg", // You'll need to add this image
       features: [
         "Pre-processed Kaggle data and optimized datasets for model training",
         "Fine-tuned classification models for improved accuracy",

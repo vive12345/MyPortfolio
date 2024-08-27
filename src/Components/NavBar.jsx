@@ -113,18 +113,32 @@
 // }
 
 // export default StickyNavbar;
-import React, { useState, useEffect } from "react";
+
+
+import React, { useState, useEffect, useRef } from "react";
 import '@fortawesome/fontawesome-free/css/all.css';
 import Logo from '/public/assets/logo.svg';
 
 export function Navbar() {
   const [openNav, setOpenNav] = useState(false);
   const [isHeartFilled, setIsHeartFilled] = useState(false);
+  const navRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => window.innerWidth >= 960 && setOpenNav(false);
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setOpenNav(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, []);
 
   const navItems = [
@@ -137,11 +151,15 @@ export function Navbar() {
     { href: "#contact-me", label: "Contact Me" }
   ];
 
+  const handleNavItemClick = () => {
+    setOpenNav(false);
+  };
+
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       {navItems.map((item) => (
         <li key={item.href} className="p-1 transition-colors hover:text-teal-600 font-medium text-right">
-          <a href={item.href} className="flex items-center">
+          <a href={item.href} className="flex items-center" onClick={handleNavItemClick}>
             {item.label}
           </a>
         </li>
@@ -150,7 +168,7 @@ export function Navbar() {
   );
 
   return (
-    <nav className="sticky top-0 z-10 bg-teal-700 text-black shadow-md">
+    <nav className="sticky top-0 z-20 bg-teal-700 text-black shadow-md" ref={navRef}>
       <div className="container mx-auto px-1 py-3">
         <div className="flex items-center justify-between">
           <a href="#" className="flex items-center space-x-2">
