@@ -79,7 +79,7 @@ const Projects = () => {
       title: "Student Academic Success & Dropout Prediction",
       subtitle: "Using Machine Learning to predict student outcomes",
       description: "Developed a machine learning model to predict student academic success and potential dropouts.",
-      image: "src/assets/HealthProject.jpg", // You'll need to add this image
+      image: "assets/HealthProject.jpg", // You'll need to add this image
       features: [
         "Visualized feature correlations using heatmaps and scatter plots",
         "Trained dataset on various algorithms",
@@ -92,7 +92,7 @@ const Projects = () => {
       title: "Health Manager Web Application",
       subtitle: "Personalized health management using Python & ML Technologies",
       description: "Created a web application for automated calorie tracking and personalized health recommendations.",
-      image: "src/assets/Project1.jpg", // You'll need to add this image
+      image: "assets/Project1.jpg", // You'll need to add this image
       features: [
         "Automated precise calorie calculations through NLP APIs",
         "Integrated Nutritionix and Twilio APIs for food calorie calculation and SMS delivery",
@@ -105,7 +105,7 @@ const Projects = () => {
       title: "Stock Prediction Using Machine Learning",
       subtitle: "Predicting stock trends with advanced ML algorithms",
       description: "Developed a machine learning model to predict stock trends using various classification algorithms.",
-      image: "src/assets/HealthProject.jpg", // You'll need to add this image
+      image: "HealthProject.jpg", // You'll need to add this image
       features: [
         "Pre-processed Kaggle data and optimized datasets for model training",
         "Fine-tuned classification models for improved accuracy",
@@ -118,7 +118,7 @@ const Projects = () => {
       title: "Tech Blog Website",
       subtitle: "Dynamic tech blog using modern web technologies",
       description: "Created a tech blog website with a dynamic front-end and efficient back-end functionality.",
-      image: "src/assets/Project1.jpg", // You'll need to add this image
+      image: "./assets/Project1.jpg", // You'll need to add this image
       features: [
         "Developed dynamic front-end using HTML, CSS, and JavaScript",
         "Implemented Node.js for efficient back-end functionality",

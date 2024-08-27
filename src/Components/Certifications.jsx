@@ -56,7 +56,7 @@ const Certifications = () => {
       description: "HackerRank | Issued Jun 2024",
       skills: "Skills: Algorithms, Problem Solving",
       credentialId: "Credential ID: 74FBA68DE755",
-      image: "src/assets/hackerrank.png",
+      image: "/assets/hackerrank.png",
       link: "https://www.hackerrank.com/certificates/74FBA68DE755"
     },
     {
@@ -64,7 +64,7 @@ const Certifications = () => {
       description: "Udemy | Issued Nov 2022",
       skills: "Skills: HTML5, CSS, JavaScript, Bootstrap, jQuery, Node.js, Express.js, React.js, MongoDB, REST APIs, Web Development, Responsive Web Design, Web Hosting",
       credentialId: "Credential ID: UC-548cdfd0-fa09-42e6-8ebe-b8bad7805034",
-      image: "src/assets/udemy.png",
+      image: "public/assets/udemy.png",
       link: "https://www.udemy.com/certificate/UC-548cdfd0-fa09-42e6-8ebe-b8bad7805034/"
     },
     {
@@ -72,7 +72,7 @@ const Certifications = () => {
       description: "Google Digital Garage | Issued May 2021",
       skills: "Skills: SEO, SEM, Social Media Marketing, Email Marketing, Google Analytics, Google Ads",
       credentialId: "Credential ID: BS6 QF7 EMA",
-      image: "src/assets/google.png",
+      image: "./public/assets/google.png",
       link: "https://learndigital.withgoogle.com/link/to/your/certificate"
     },
   ];

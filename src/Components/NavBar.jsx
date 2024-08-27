@@ -115,7 +115,7 @@
 // export default StickyNavbar;
 import React, { useState, useEffect } from "react";
 import '@fortawesome/fontawesome-free/css/all.css';
-import Logo from '../assets/logo.svg';
+import Logo from '/public/assets/logo.svg';
 
 export function Navbar() {
   const [openNav, setOpenNav] = useState(false);

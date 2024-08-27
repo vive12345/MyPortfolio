@@ -81,7 +81,7 @@ const PortfolioPage = () => {
           <div className="lg:w-1/2 relative">
             <div className="aspect-w-1 aspect-h-1">
               <img
-                src="src/assets/womenlaptop.avif"
+                src="/assets/womenlaptop.avif"
                 alt="Woman using laptop"
                 className="object-cover w-full h-full rounded-bl-[100px] lg:rounded-bl-[200px]"
               />
