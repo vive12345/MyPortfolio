@@ -47,9 +47,76 @@
 // };
 
 // export default Certifications;
-import React from 'react';
+
+
+
+// import React from 'react';
+// import { Element } from 'react-scroll';
+// const Certifications = () => {
+//   const certifications = [
+//     {
+//       title: "Problem Solving (Basic)",
+//       description: "HackerRank | Issued Jun 2024",
+//       skills: "Skills: Algorithms, Problem Solving",
+//       credentialId: "Credential ID: 74FBA68DE755",
+//       image: "./assets/hackerrank.png",
+//       link: "https://www.hackerrank.com/certificates/74FBA68DE755"
+//     },
+//     {
+//       title: "The Complete 2022 Web Development Bootcamp",
+//       description: "Udemy | Issued Nov 2022",
+//       skills: "Skills: HTML5, CSS, JavaScript, Bootstrap, jQuery, Node.js, Express.js, React.js, MongoDB, REST APIs, Web Development, Responsive Web Design, Web Hosting",
+//       credentialId: "Credential ID: UC-548cdfd0-fa09-42e6-8ebe-b8bad7805034",
+//       image: "./assets/udemy.png",
+//       link: "https://www.udemy.com/certificate/UC-548cdfd0-fa09-42e6-8ebe-b8bad7805034/"
+//     },
+//     {
+//       title: "The Fundamentals of Digital Marketing",
+//       description: "Google Digital Garage | Issued May 2021",
+//       skills: "Skills: SEO, SEM, Social Media Marketing, Email Marketing, Google Analytics, Google Ads",
+//       credentialId: "Credential ID: BS6 QF7 EMA",
+//       image: "./assets/google.png",
+//       link: "https://learndigital.withgoogle.com/link/to/your/certificate"
+//     },
+//   ];
+
+//   return (
+    
+//     <div className="bg-teal-600 w-full">
+//       <div className="container mx-auto px-4 py-16">
+//         <h1 className="text-3xl font-bold mb-8 text-white-600">CERTIFICATIONS</h1>
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+//           {certifications.map((cert, index) => (
+//             <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg flex flex-col">
+//               <img src={cert.image} alt={cert.title} className="w-full h-48 object-cover" />
+//               <div className="p-4 flex-grow">
+//                 <h3 className="text-xl font-semibold text-teal-600 mb-2">{cert.title}</h3>
+//                 <p className="text-gray-600 text-sm mb-2">{cert.description}</p>
+//                 <p className="text-gray-600 text-sm">{cert.skills}</p>
+//               </div>
+//               <div className="px-4 py-2 bg-gray-100 flex justify-between items-center">
+//                 <a href={cert.link} target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-800">
+//                   View Credential
+//                 </a>
+//               </div>
+//               <div className="px-4 py-2 bg-gray-200 text-gray-600 text-xs">
+//                 {cert.credentialId}
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Certifications;
+
+import React, { useState } from 'react';
 
 const Certifications = () => {
+  const [expandedImage, setExpandedImage] = useState(null);
+
   const certifications = [
     {
       title: "Problem Solving (Basic)",
@@ -77,14 +144,27 @@ const Certifications = () => {
     },
   ];
 
+  const handleImageClick = (image) => {
+    setExpandedImage(image);
+  };
+
+  const handleCloseExpandedImage = () => {
+    setExpandedImage(null);
+  };
+
   return (
-    <div className="bg-teal-600 w-full">
+    <div className="bg-teal-600 w-full ">
       <div className="container mx-auto px-4 py-16">
-        <h1 className="text-3xl font-bold mb-8 text-white-600">CERTIFICATIONS</h1>
+        <h1 className="text-5xl font-bold mb-8 text-white">CERTIFICATIONS</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {certifications.map((cert, index) => (
             <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg flex flex-col">
-              <img src={cert.image} alt={cert.title} className="w-full h-48 object-cover" />
+              <img 
+                src={cert.image} 
+                alt={cert.title} 
+                className="w-full h-48 object-cover cursor-pointer" 
+                onClick={() => handleImageClick(cert.image)}
+              />
               <div className="p-4 flex-grow">
                 <h3 className="text-xl font-semibold text-teal-600 mb-2">{cert.title}</h3>
                 <p className="text-gray-600 text-sm mb-2">{cert.description}</p>
@@ -102,9 +182,21 @@ const Certifications = () => {
           ))}
         </div>
       </div>
+      {expandedImage && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+          onClick={handleCloseExpandedImage}
+        >
+          <img 
+            src={expandedImage} 
+            alt="Expanded certificate" 
+            className="max-w-[90%] max-h-[90%] object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </div>
   );
 };
 
 export default Certifications;
-

@@ -80,7 +80,7 @@
 
 // export default Experience;
 import React from 'react';
-
+import { Element } from 'react-scroll';
 const Experience = () => {
   const experiences = [
     {
@@ -113,10 +113,10 @@ const Experience = () => {
   ];
 
   return (
-    <section className="bg-gray-50 py-12">
-  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 className="text-4xl font-bold text-gray-800 mb-8 text-center">PROFESSIONAL EXPERIENCE</h2>
-    <div className="space-y-6">
+
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-5">
+    <h2 className="text-5xl font-bold text-gray-800 mb-8 text-center">PROFESSIONAL EXPERIENCE</h2>
+    <div className="space-y-6 py-4">
       {experiences.map((exp, index) => (
         <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
           <div className="md:flex">
@@ -160,7 +160,8 @@ const Experience = () => {
       ))}
     </div>
   </div>
-</section>
+
+
   );
 }
 

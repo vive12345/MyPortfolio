@@ -105,8 +105,9 @@ const Education = () => {
   ];
 
   return (
+    
     <div className="container mx-auto p-4 md:p-8 ">
-      <h2 className="text-4xl font-extrabold mb-12 text-emerald-700 text-center">EDUCATION</h2>
+      <h2 className="text-5xl font-extrabold mb-12 text-emerald-700 text-center">EDUCATION</h2>
       <div className="relative pl-6 md:pl-10 before:content-[''] before:absolute before:left-2 md:before:left-4 before:top-2 before:h-full before:w-2 before:bg-emerald-300">
         {educationData.map((item, index) => (
           <div key={index} className="mb-16 relative">

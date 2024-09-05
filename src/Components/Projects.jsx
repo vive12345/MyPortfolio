@@ -72,7 +72,7 @@
 
 // export default Projects;
 import React from 'react';
-
+import { Element } from 'react-scroll';
 const Projects = () => {
   const projects = [
     {
@@ -130,42 +130,44 @@ const Projects = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-16">
-      <h2 className="text-3xl font-bold mb-8 text-emerald-600">PROJECTS</h2>
-      {projects.map((project, index) => (
-        <div key={index} className="mb-20">
-          <div className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center`}>
-            <div className="md:w-1/2 md:px-8">
-              <h2 className="text-4xl font-bold mb-4">{project.title}</h2>
-              <p className="text-xl mb-6">{project.subtitle}</p>
-              <p className="mb-6">{project.description}</p>
-              <p className="font-semibold mb-4">Key Features:</p>
-              <ul className="list-disc pl-5 mb-6 space-y-2">
-                {project.features.map((feature, i) => (
-                  <li key={i}>{feature}</li>
-                ))}
-              </ul>
-              <a href={project.github} target="_blank" rel="noopener noreferrer" className="bg-emerald-600 text-white px-6 py-2 rounded hover:bg-emerald-700 transition duration-300">
-                View on GitHub
-              </a>
-            </div>
-            <div className="md:w-1/2 mt-8 md:mt-0">
-              <img src={project.image} alt={project.title} className="rounded-lg shadow-lg w-full" />
-              <div className="mt-6 bg-gray-100 p-4 rounded-lg">
-                <h3 className="font-semibold mb-2">Technologies Used:</h3>
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech, i) => (
-                    <span key={i} className="bg-white px-3 py-1 rounded-full text-sm">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
+
+    <div className="container mx-auto px-4 py-8 sm:py-12 md:py-16">
+  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 md:mb-10 text-emerald-600 text-center">PROJECTS</h2>
+  {projects.map((project, index) => (
+    <div key={index} className="mb-12 sm:mb-16 md:mb-20">
+      <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center`}>
+        <div className="lg:w-1/2 lg:px-6 mb-8 lg:mb-0">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">{project.title}</h2>
+          <p className="text-lg sm:text-xl mb-4 sm:mb-6">{project.subtitle}</p>
+          <p className="mb-4 sm:mb-6 text-sm sm:text-base">{project.description}</p>
+          <p className="font-semibold mb-2 sm:mb-3">Key Features:</p>
+          <ul className="list-disc pl-5 mb-4 sm:mb-6 space-y-1 sm:space-y-2 text-sm sm:text-base">
+            {project.features.map((feature, i) => (
+              <li key={i}>{feature}</li>
+            ))}
+          </ul>
+          <a href={project.github} target="_blank" rel="noopener noreferrer" className="inline-block bg-emerald-600 text-white px-4 sm:px-6 py-2 rounded text-sm sm:text-base hover:bg-emerald-700 transition duration-300">
+            View on GitHub
+          </a>
+        </div>
+        <div className="lg:w-1/2 mt-6 lg:mt-0">
+          <img src={project.image} alt={project.title} className="rounded-lg shadow-lg w-full h-auto max-h-[300px] object-fill" />
+          <div className="mt-4 sm:mt-6 bg-gray-100 p-3 sm:p-4 rounded-lg">
+            <h3 className="font-semibold mb-2 text-sm sm:text-base">Technologies Used:</h3>
+            <div className="flex flex-wrap gap-2">
+              {project.technologies.map((tech, i) => (
+                <span key={i} className="bg-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm">
+                  {tech}
+                </span>
+              ))}
             </div>
           </div>
         </div>
-      ))}
+      </div>
     </div>
+  ))}
+</div>
+
   );
 };
 

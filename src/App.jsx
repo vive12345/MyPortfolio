@@ -43,15 +43,18 @@ import Skills from './Components/Skills';
 
 function App() {
   return (
-    <div>
+
+    <div className="App">
       <NavBbar />
-      <section id="about-me"><AboutMe /></section>
-      <section id="skills"><Skills /></section>
-      <section id="experience"><Experience /></section>
-      <section id="projects"><Projects /></section>
-      <section id="certification"><Certification /></section>
-      <section id="education"><Education /></section>
-      <section id="contact-me"><ContactMe /></section>
+      <main>
+        <section className="scroll-mt-20" id="about"><AboutMe /></section>
+        <section className=" scroll-mt-20" id="skills"><Skills /></section>
+        <section className="scroll-mt-20" id="experience"><Experience /></section>
+        <section className="scroll-mt-20" id="projects"><Projects /></section>
+        <section className="scroll-mt-20" id="certification"><Certification /></section>
+        <section className="scroll-mt-20" id="education"><Education /></section>
+        <section className="scroll-mt-20" id="contact"><ContactMe /></section>
+      </main>
     </div>
   );
 }

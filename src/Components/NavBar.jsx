@@ -142,13 +142,13 @@ export function Navbar() {
   }, []);
 
   const navItems = [
-    { href: "#about-me", label: "About Me" },
+    { href: "/", label: "About Me" },
     { href: "#skills", label: "Skills" },
     { href: "#experience", label: "Experience" },
     { href: "#projects", label: "Projects" },
     { href: "#certification", label: "Certification" },
     { href: "#education", label: "Education" },
-    { href: "#contact-me", label: "Contact Me" }
+    { href: "#contact", label: "Contact Me" }
   ];
 
   const handleNavItemClick = () => {
