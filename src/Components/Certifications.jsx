@@ -162,7 +162,7 @@ const Certifications = () => {
               <img 
                 src={cert.image} 
                 alt={cert.title} 
-                className="w-full h-48 object-cover cursor-pointer" 
+                className="w-full h-48 object-cover cursor-pointer transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300" 
                 onClick={() => handleImageClick(cert.image)}
               />
               <div className="p-4 flex-grow">

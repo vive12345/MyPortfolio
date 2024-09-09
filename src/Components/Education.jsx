@@ -49,7 +49,7 @@ const DropdownSection = ({ title, items, icon }) => {
 const Education = () => {
   const educationData = [
     {
-      years: "2024 - 2026",
+      years: "Jan 2024 - Dec 2025",
       degree: "Master's in Software Engineering",
       institution: "Arizona State University",
       gpa: "3.44/4.0 GPA",
@@ -60,12 +60,10 @@ const Education = () => {
         "Software Project Process Quality Managemnet",
       ],
       achievements: [
-        "Member of ASU Soda club",
-        "Volunteer for Sky Meditation Workshop"
+        "Member of ASU  Software Developers Association (SoDA) club",
       ],
       extracurricular: [
-        "Member of ASU Soda club",
-        "Volunteer for Sky Meditation Workshop"
+        "Member of ASU  Software Developers Association (SoDA) club",
       ]
     },
     {
@@ -83,7 +81,7 @@ const Education = () => {
       ],
       achievements: [
         "Core Member of Rotract Club (Social Service, Leadership and Character Building)",
-        "Undergraduate Project Award - Top 5% Distinction"
+        "Undergraduate Project Award - Top 10% Distinction"
       ],
      
     },
@@ -94,11 +92,11 @@ const Education = () => {
       gpa: "70 %",
       achievements: [
         "Winner of Inter-school Science Exhibition",
-        "Captain of School Volleyball Team",
+        "Captain of School Throwball Team (Played on state-level)",
         "Swimming State Level Gold Medalist"
       ],
       extracurricular: [
-        "Captain of School Volleyball Team",
+        "Captain of School throwball Team (Played on state-level)",
         "Swimming State Level Gold Medalist"
       ]
     }
