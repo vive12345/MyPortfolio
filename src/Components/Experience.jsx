@@ -1,10 +1,9 @@
-
 import React from "react";
 import { Element } from "react-scroll";
 const Experience = () => {
   const experiences = [
     {
-      title: "Artificial Intelligence and Machine Learning Engineer Intern",
+      title: "Software Developer Intern",
       company: "TEKSUN IoT and AI Solutions Company",
       location: "Ahmedabad, Gujarat, India",
       date: "June 2023 – September 2023",
@@ -23,15 +22,17 @@ const Experience = () => {
         "RPA",
         "Roboflow",
         "LabelImg",
+        "Django REST Framework",
+        "Redis",
+        "Apache Spark",
+        "Tableau",
+        "DAX",
+        "Predictive Analytics",
+        "TensorFlow",
+        "Data Augmentation",
       ],
       achievements: [
-        "Devised an innovative sliding window algorithm for a real-world attendance system, processing 30 frames per sec (FPS) and identifying faces with 98.7% accuracy against a 500+ employee database, demonstrating high-volume processing.",
-        "Collaborated with a cross-functional team to architect innovative RPA solutions using UiPath Studio, automating email marketing workflows and reducing sales team's personalized outreach time, saving 20+ hours weekly.",
-        "Formulated Automatic License Plate Recognition system by exporting YOLOv6 model through Open Neural Network Exchange, utilizing Tesseract OCR & regex matching, achieving 94% accuracy at 30 FPS in real-time testing.",
-        "Leveraged Roboflow's data augmentation techniques, boosting object detection mean Average Precision (mAP) by 3%.",
-        "Revised a high-performance Python tool leveraging OpenCV and FFmpeg, enabling simultaneous processing of multiple customer videos and converting 10,000+ annotatable images in one go, eliminating one-by-one conversion.",
-        "Led a team of 4 interns, delegated 9k+ image annotations using LabelImg, & reported bi-weekly in scrum meetings.",
-        "Engineered GlucoseGuard AI, a real-time IV glucose monitoring system using YOLOv7, achieving 86.5% mean Average Precision (mAP) in glucose level detection and implementing estimation algorithm with OpenCV & statistical averaging for accurate percentage calculations.",
+        "Developed API endpoints using Django REST Framework for real-time face recognition with faster processing through Redis caching; devised a sliding window algorithm with OpenCV & TensorFlow for real-time detection in a 500+ employee database; formulated an Automatic License Plate Recognition system using YOLOv6, Tesseract OCR, and regex matching for real-time testing; revised a Python tool to process videos and convert 10,000+ images in bulk; collaborated on RPA solutions with UiPath Studio to automate email marketing, saving significant time weekly; led 5 interns to manage image annotations; and analyzed 5,000+ CRM interactions to improve response rates using Apache Spark and Python, while developing Tableau dashboards that enhanced decision-making. Leveraged Roboflow's data augmentation techniques, boosting object detection performance. Engineered GlucoseGuard AI, a real-time IV glucose monitoring system using YOLOv7 for glucose level detection.",
       ],
     },
     {
@@ -50,9 +51,7 @@ const Experience = () => {
         "Customer Requirements Gathering",
       ],
       achievements: [
-        "Developed a high-performance React-based grocery B2C platform utilizing Tailwind CSS; produced 10+ modular components and implemented Redux for efficient cart state management, delivering a responsive and scalable UI.",
-        "Created a MySQL database for the product catalog; teamed up to integrate the database with backend logic.",
-        "Conducted online customer meetings to gather user interface requirements & prepared high-fidelity Figma prototype for the product landing page, which reduced development turnaround time and improved customer satisfaction by 100%.",
+        "This project demonstrates the development of a comprehensive grocery B2C platform, combining modern front-end technologies with robust back-end solutions. The implementation showcases proficiency in React, Redux, and Tailwind CSS for creating a responsive and scalable user interface. Back-end work included MySQL database design and integration. A user-centric approach, involving customer meetings and Figma prototyping, led to improved development efficiency and customer satisfaction. Overall, the project highlights a blend of technical skills in full-stack development and a strong focus on user experience optimization.",
       ],
     },
   ];
@@ -102,7 +101,7 @@ const Experience = () => {
                   <ul className="space-y-1 text-base">
                     {exp.achievements.map((achievement, i) => (
                       <li key={i} className="flex items-start">
-                        <svg
+                        {/* <svg
                           className="w-4 h-4 text-emerald-500 mr-1 mt-1 flex-shrink-0"
                           fill="none"
                           stroke="currentColor"
@@ -115,7 +114,7 @@ const Experience = () => {
                             strokeWidth="2"
                             d="M5 13l4 4L19 7"
                           ></path>
-                        </svg>
+                        </svg> */}
                         <span className="text-gray-600">{achievement}</span>
                       </li>
                     ))}

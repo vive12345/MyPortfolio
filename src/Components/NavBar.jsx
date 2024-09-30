@@ -28,7 +28,7 @@ export function Navbar() {
   }, []);
 
   const navItems = [
-    { href: "/", label: "About Me" },
+    { href: "#about", label: "About Me" },
     { href: "#skills", label: "Skills" },
     { href: "#experience", label: "Experience" },
     { href: "#projects", label: "Projects" },
